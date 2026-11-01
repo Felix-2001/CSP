@@ -13,7 +13,6 @@ body{
 	background-attachment: fixed;
 	color: #F5F2EA;
 }
-
 @media (max-width: 800px), (prefers-reduced-motion: reduce) {
 	.box {
 		background-attachment: scroll;
@@ -34,17 +33,8 @@ body{
 	margin: 0 1em;
 	position: relative;
 }
-.nav-item1{
-	margin: 0 1em;
-	position: relative;
-	margin-left: auto;
-}
-.nav-item1 a{
-	color: black;
-	text-decoration: none;
-}
 .nav-item a{
-	color: black;
+	color: #FAF9F6;
 	text-decoration: none;
 }
 @media (max-width: 600px){
@@ -62,4 +52,23 @@ body{
 	width: 8.75em;
 	border: solid black 0.125em;
 	border-radius: 0.625em;
+}
+.main-info{
+	display: flex;
+	column-gap: 31.25em;
+}
+.main-box{
+	margin-top: 10%;
+	border-style: solid;
+	border-color: transparent;
+	background-color: transparent;
+    background: rgba(43, 47, 51, 0.85);
+	color: #F5F2EA;
+	padding: 1.5em;
+	border-radius: 0.5em;
+	max-width: 32rem;
+	line-height: 1.6;
+}
+.content{
+    background-color: #36454F;
 }
