@@ -1,7 +1,7 @@
 Coursework repository for the Client-Side Programming course.
 
 ## My Background
-I already have experience with HTML and CSS and a background in SEO, so in this project I want to combine well-structured, search-friendly markup with a dynamic, polished design, and add JavaScript to make the booking flow interactive.
+I already have experience with HTML and CSS and a background in SEO, so in this project I want to combine well-structured, search-friendly markup with a dynamic, polished design, and add JavaScript to make the booking flow interactive. Info for this project I am also using some of old code from a project I created for fun years ago.
 
 ## About
 A website for a small sauna rental by Kuivasjärvi lake in Seinäjoki. Visitors can
