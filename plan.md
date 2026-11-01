@@ -1,27 +1,29 @@
-1. Facts needed:
-    1.1 Capacity of the Saunas
-    1.2 What is Weekend? Friday to Sunday or just Satuarday to Sunday
-    1.3 What time slot is the evening time?
-2. Page Structure:
-    2.1 First header in h1
-        then next title only one h2, every other only h3 for better SEO
-    2.2 Different Paragraphs/cards for each Sauna:
-        some facts, SEO-Keywords, short description what to expect
-    2.3 Availabilty for each Sauna a calender or a table
-    2.4 Booking form wich is connected to google calander so there will be no overbookings:
-        needs slot for phone number, timeframe, day and name
-    2.5 Footer with all importans links e.g. Impressum and social media
-3. What I´m gonna watch out for:
-    3.1 colour neutral as well:
-        booked as a word so the brother can read it 
-    3.2 weekends also written out not just color coded
-4. The Form:
-    4.1 Is on the main page/index but has it´s own site as well
-    4.2 checks with the calender if slot is free(later with n8n and google calender but not for this project)
-    4.3 books the slot automatically and sends email to the owners with EmailJS or Formspree for simplicty
-    4.4 sends confirmation to the guest
-5. Design and color theme:
-    5.1 natural colors:charcoal grey, off-white and lake teal
-    5.2 usability for mobile and PC    
-    5.3 Backgroud picture of a sauna place, dynamic so moves when scrolling
-    5.4 Picture gallery of the saunas
+# Project plan
+
+## 1. Facts needed
+- 1.1 Capacity of the saunas
+- 1.2 What counts as weekend: Friday to Sunday, or only Saturday to Sunday?
+- 1.3 What time slot is the evening?
+
+## 2. Page structure
+- 2.1 One h1 for the page title, one h2 per section, h3 for every sauna (better SEO)
+- 2.2 A card for each sauna: some facts, SEO keywords, short description of what to expect
+- 2.3 Availability for each sauna as a calendar or table
+- 2.4 Booking form with name, phone number, day and timeframe
+- 2.5 Footer with important links, e.g. legal notice and social media
+
+## 3. What I'm going to watch out for
+- 3.1 Colour-neutral design: "Booked" is written as a word so my brother can read it
+- 3.2 Weekends are written out, not just colour-coded
+
+## 4. The form
+- 4.1 On the main page (index), and also on its own page
+- 4.2 Checking the calendar for a free slot (later with n8n and Google Calendar, but not in this project)
+- 4.3 Sending the email to the owners with EmailJS or Formspree, for simplicity
+- 4.4 Sending a confirmation to the guest
+
+## 5. Design and colour theme
+- 5.1 Natural colours: charcoal grey, off-white and lake teal
+- 5.2 Usable on mobile and PC
+- 5.3 Background picture of a sauna place that moves when scrolling
+- 5.4 Picture gallery of the saunas
