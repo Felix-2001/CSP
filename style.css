@@ -1,6 +1,26 @@
+body{
+    margin:0;
+}
+.background-img {
+	min-height: 100vh;
+	padding: 0.625em 10% 3em;
+	background-image:
+		linear-gradient(rgba(43, 47, 51, 0.55), rgba(43, 47, 51, 0.55)),
+		url("images/image3.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #F5F2EA;
+}
+
+@media (max-width: 800px), (prefers-reduced-motion: reduce) {
+	.box {
+		background-attachment: scroll;
+	}
+}
 .navbar{
-	background-color: #649EA1;
-	padding: 1em;
+	background-color:  #36454F;
 }
 .nav-list{
 	display: flex;
