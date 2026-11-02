@@ -16,7 +16,22 @@
             <li class="nav-item"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="background-img"></div>
+      <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h1>Contact Us!</h1>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="15ca491f-cb7a-4439-8b55-af477f0ef5aa">
+                <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+                <input type="text" name="E-mail" placeholder="Your Email" class="contact-input" required>
+                <textarea name="Message" placeholder="Your Message to us!" class="contact-input" required></textarea>
+                <button type="submit">Confirm</button>
+            </form>
+            <div class="contact-right">
+                <img src="images/kontakt-sauna.png" alt="image">
+            </div>
+        </div>
     <footer class="site-footer">
 	<a href="https://www.instagram.com/">
 		<img src="images/logowo.png" alt="Instagram" class="instagram">
