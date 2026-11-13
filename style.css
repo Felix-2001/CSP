@@ -1,5 +1,43 @@
+:root {
+	color-scheme: light dark;
+	--bg-page: #F5F2EA;      --text: #2B2F33;       --heading: var(--accent);
+	--field-bg: var(--field-bg)FFF;     --field-text: #2B2F33; --field-border: #2B2F33;
+	--placeholder: #5A5F63;  --accent: var(--accent);     --accent-text: #F5F2EA;
+	--accent-hover: #2B2F33; --accent-line: #5CC3C8; --focus: var(--accent);
+
+	--nav-bg: var(--nav-bg); --nav-text: #FAF9F6; --footer-bg: #2B2F33;
+	--text-on-dark: #F5F2EA; --panel-bg: rgba(43, 47, 51, 0.85);
+	--hero-overlay: rgba(43, 47, 51, 0.55); --focus-on-dark: #5CC3C8;
+	--font-heading: Georgia, "Times New Roman", serif;
+	--font-text: system-ui, -apple-system, "Segoe UI", sans-serif;
+	--space-1: 0.5rem; --space-2: 1rem; --space-3: 1.5rem; --space-4: 2rem;
+	--card-bg: #F5F2EA;  --card-text: #2B2F33;  --card-border: #2B2F33;
+
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-page: #1F2326;      --text: #F5F2EA;       --heading: #5CC3C8;
+		--field-bg: #2B2F33;     --field-text: #F5F2EA; --field-border: #5CC3C8;
+		--placeholder: #A9B0B5;  --accent: #5CC3C8;     --accent-text: #1B1F22;
+		--accent-hover: #F5F2EA; --focus: #5CC3C8;
+		--hero-overlay: rgba(31, 35, 38, 0.7);
+		--card-bg: #2B2F33;  --card-text: #F5F2EA;  --card-border: #5CC3C8;
+	}
+}
+ 
+h1, h2, h3 { font-family: var(--font-heading); }
+
+a:focus-visible, button:focus-visible {
+	outline: 0.1875rem solid var(--focus);
+	outline-offset: 0.25rem;
+}
+.navbar a:focus-visible, .site-footer a:focus-visible {
+	outline-color: var(--focus-on-dark);
+}
 body{
     margin:0;
+	font-family: var(--font-text);
 }
 .background-img {
 	min-height: 100vh;
@@ -14,12 +52,12 @@ body{
 	color: #F5F2EA;
 }
 @media (max-width: 800px), (prefers-reduced-motion: reduce) {
-	.box {
+	.background-img {
 		background-attachment: scroll;
 	}
 }
 .navbar{
-	background-color:  #36454F;
+	background-color:  var(--nav-bg);
 }
 .nav-list{
 	display: flex;
@@ -64,7 +102,7 @@ body{
 	line-height: 1.6;
 }
 .content{
-    background-color: #36454F;
+    background-color: var(--nav-bg);
 }
 .site-footer {
 	display: flex;
@@ -129,7 +167,7 @@ body{
 .contact-left-title h1 {
 	font-weight: 600;
 	font-size: x-large;
-	color: #1B6B70;
+	color: var(--accent);
 	margin-bottom: 0.3125em;
 }
 
@@ -153,10 +191,10 @@ body{
 	max-width: 26em;
 	height: 3.125em;
 	padding: 0 1.5625em;
-	border: 0.125em solid #2B2F33;
+	border: 0.125em solid var(--field-border);
 	border-radius: 3.125em;
-	background-color: #fff;
-	color: #2B2F33;
+	background-color: var(--field-bg);
+	color: var(--field-text);
 	box-sizing: border-box;
 }
 
@@ -175,7 +213,7 @@ body{
 
 .contact-input:focus-visible,
 .contact-left button:focus-visible {
-	outline: 0.1875em solid #1B6B70;
+	outline: 0.1875em solid var(--accent);
 	outline-offset: 0.125em;
 }
 
@@ -184,7 +222,7 @@ body{
 	padding: 1em 2em;
 	border: 0.125em solid #2B2F33;
 	border-radius: 3.125em;
-	background-color: #1B6B70;
+	background-color: var(--accent);
 	color: #F5F2EA;
 	cursor: pointer;
 }
@@ -242,4 +280,44 @@ body{
 		display: inline-block;
 		padding: 0.75em 0.5em;
 	}
+}
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: var(--space-3);
+	margin-block: var(--space-4);
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background-color: var(--card-bg);
+	color: var(--card-text);
+	border: 1px solid var(--card-border);
+	border-radius: 0.5rem;
+	box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.35);
+	transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-0.25rem); }
+.card-img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.card-body { display: flex; flex-direction: column; flex: 1; gap: var(--space-2); padding: var(--space-3); }
+.card-body h2, .card-body h3 { margin: 0; }
+.card-facts { display: grid; gap: var(--space-1); margin: 0; }
+.card-facts div { display: flex; justify-content: space-between; gap: var(--space-2); }
+.card-facts dt { font-weight: 600; }
+.card-facts dd { margin: 0; }
+.card-link {
+	align-self: flex-start;
+	margin-top: auto;
+	padding: 0.75rem 1.5rem;
+	border-radius: 3.125rem;
+	background-color: var(--accent);
+	color: var(--accent-text);
+	font-weight: 600;
+	text-decoration: none;
+}
+.card-link:hover { background-color: var(--accent-hover); }
+@media (prefers-reduced-motion: reduce) {
+	.card { transition: none; }
+	.card:hover { transform: none; }
 }
