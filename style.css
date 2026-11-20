@@ -321,3 +321,78 @@ body{
 	.card { transition: none; }
 	.card:hover { transform: none; }
 }
+/* E3: filter bar on the listing page */
+.card[hidden] { display: none; }
+.filter-bar {
+	margin-block: var(--space-3);
+	padding: var(--space-2) var(--space-3);
+	background-color: var(--panel-bg);
+	color: var(--text-on-dark);
+	border-radius: 0.5rem;
+}
+.filter-bar p { margin: 0 0 var(--space-1); }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-2); }
+.filter-buttons button {
+	padding: 0.5rem 1rem;
+	border: 2px solid var(--text-on-dark);
+	border-radius: 3.125rem;
+	background: transparent;
+	color: var(--text-on-dark);
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+.filter-buttons button[aria-pressed="true"] {
+	background-color: var(--accent-line);
+	border-color: var(--accent-line);
+	color: #1B1F22;
+}
+.filter-buttons button:focus-visible { outline: 3px solid var(--focus-on-dark); outline-offset: 2px; }
+#sauna-status { font-weight: 600; margin-bottom: 0; }
+
+/* E3: contact form */
+/* The contact area is always light, so it keeps its own light colours in dark mode too. */
+.contact-container {
+	--field-bg: #FFFFFF; --field-text: #2B2F33; --field-border: #2B2F33;
+	--accent: #1B6B70; --accent-text: #F5F2EA; --accent-hover: #2B2F33; --focus: #1B6B70;
+}
+.contact-help { margin-block: var(--space-2); padding-inline: var(--space-2); }
+#info-button {
+	anchor-name: --info;
+	padding: 0.75rem 1.5rem;
+	border: 0;
+	border-radius: 3.125rem;
+	background-color: var(--accent);
+	color: var(--accent-text);
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+#info-button:hover { background-color: var(--accent-hover); }
+#info-menu {
+	position-anchor: --info;
+	position-area: bottom span-right;
+	inset: auto;
+	margin: 0.25rem 0 0;
+	position-try-fallbacks: flip-block;
+	padding: var(--space-1);
+	list-style: none;
+	background-color: var(--card-bg);
+	color: var(--card-text);
+	border: 2px solid var(--card-border);
+	border-radius: 0.5rem;
+}
+#info-menu a {
+	display: block;
+	padding: 0.5rem 1rem;
+	color: var(--card-text);
+}
+.field { display: flex; flex-direction: column; gap: 0.35rem; }
+.field label { font-weight: 600; color: #2B2F33; }
+.field p { margin: 0; }
+.hint { color: #4A5056; font-size: 0.9em; }
+.error { color: #9B1C1C; font-weight: 600; }
+.error:empty { display: none; }
+[aria-invalid="true"] { border-color: #9B1C1C; border-left-width: 0.5rem; }
+#form-status { font-weight: 600; color: #2B2F33; }
+#form-status:empty { display: none; }

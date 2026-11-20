@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Saunas | Kuivasjärven Rantasaunat</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,8 +22,17 @@
     <main>
     <div class="background-img">
     <h1>Our Saunas</h1>
-    <div class="card-grid">
-	<article class="card">
+    <div class="filter-bar">
+        <p id="filter-label">Group size</p>
+        <div class="filter-buttons" role="group" aria-labelledby="filter-label">
+            <button type="button" data-filter="all" aria-pressed="true">All saunas</button>
+            <button type="button" data-filter="5" aria-pressed="false">5 or more people</button>
+            <button type="button" data-filter="7" aria-pressed="false">7 or more people</button>
+        </div>
+        <p id="sauna-status" role="status">Showing 3 of 3 saunas</p>
+    </div>
+    <div class="card-grid" id="sauna-list">
+	<article class="card" data-capacity="8">
 		<img class="card-img" src="images/smoke.png" alt="Smoke sauna on the shore of Kuivasjärvi" width="600" height="400">
 		<div class="card-body">
 			<h2>Smoke Sauna</h2>
@@ -35,7 +45,7 @@
 			<a class="card-link" href="contact.html">Request the smoke sauna</a>
 		</div>
 	</article>
-    	<article class="card">
+    	<article class="card" data-capacity="6">
 		<img class="card-img" src="images/sauna2.png" alt="Wood-fired lakeside sauna with a jetty into the lake" width="600" height="400">
 		<div class="card-body">
 			<h2>Wood-Fired Lakeside Sauna</h2>
@@ -48,7 +58,7 @@
 			<a class="card-link" href="contact.html">Request the lakeside sauna</a>
 		</div>
 	</article>
-    	<article class="card">
+    	<article class="card" data-capacity="4">
 		<img class="card-img" src="images/cabin.png" alt="Small wooden cabin sauna in the forest" width="600" height="400">
 		<div class="card-body">
 			<h2>Cabin Sauna</h2>

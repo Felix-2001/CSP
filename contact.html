@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Kuivasjärven Rantasaunat</title>
     <link rel="stylesheet" href="style.css">
+    <script src="form.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,17 +20,44 @@
     </nav>
     </header>
     <main>
-      <div class="contact-container">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-help">
+            <button type="button" id="info-button" popovertarget="info-menu">Before you book</button>
+            <ul id="info-menu" popover>
+                <li><a href="listing.html">Saunas and prices</a></li>
+                <li><a href="about.html#booking">How booking works</a></li>
+                <li><a href="about.html#find">Find us</a></li>
+            </ul>
+        </div>
+        <div class="contact-container">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-left">
                 <div class="contact-left-title">
                     <h1>Contact Us!</h1>
                     <hr>
                 </div>
+                <p>This form is not connected to our email yet. It checks your message and keeps it ready on this page. We confirm every booking by phone.</p>
+                <p>Fields marked * are required.</p>
                 <input type="hidden" name="access_key" value="15ca491f-cb7a-4439-8b55-af477f0ef5aa">
-                <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
-                <input type="text" name="E-mail" placeholder="Your Email" class="contact-input" required>
-                <textarea name="Message" placeholder="Your Message to us!" class="contact-input" required></textarea>
-                <button type="submit">Confirm</button>
+
+                <div class="field">
+                    <label for="name">Your name *</label>
+                    <input id="name" name="name" type="text" class="contact-input" autocomplete="name" required aria-describedby="name-error">
+                    <p class="error" id="name-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Your email *</label>
+                    <input id="email" name="email" type="email" class="contact-input" autocomplete="email" required aria-describedby="email-error">
+                    <p class="error" id="email-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="message">Your message to us *</label>
+                    <textarea id="message" name="message" class="contact-input" required aria-describedby="message-error"></textarea>
+                    <p class="error" id="message-error"></p>
+                </div>
+
+                <button type="submit">Check my message</button>
+                <p id="form-status" role="status"></p>
             </form>
             <div class="contact-right">
                 <img src="images/kontakt-sauna.png" alt="Envelope with a speech bubble: send us a message">
