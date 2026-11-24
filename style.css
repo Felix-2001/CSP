@@ -396,3 +396,29 @@ body{
 [aria-invalid="true"] { border-color: #9B1C1C; border-left-width: 0.5rem; }
 #form-status { font-weight: 600; color: #2B2F33; }
 #form-status:empty { display: none; }
+
+/* E4: evenings, total price, loading buttons */
+.evenings { margin: 0; padding: 0; border: 0; min-width: 0; }
+.evenings legend { padding: 0; margin-bottom: var(--space-1); font-weight: 600; }
+.evenings ul { display: grid; gap: 0.25rem; margin: 0; padding: 0; list-style: none; }
+.evenings li { padding-block: 0.25rem; }
+.evenings label { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; min-height: 1.75rem; cursor: pointer; }
+.evenings .state { white-space: nowrap; margin-left: auto; font-weight: 600; }
+.evenings input[type="checkbox"] { width: 1.25rem; height: 1.25rem; accent-color: var(--accent); flex: none; }
+.evenings .booked { opacity: 0.85; }
+.evenings input[type="checkbox"]:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.card .total { font-weight: 700; margin: 0; }
+.list-buttons { margin: var(--space-2) 0; }
+.list-buttons button {
+	padding: 0.75rem 1.5rem;
+	border: 2px solid var(--text-on-dark);
+	border-radius: 3.125rem;
+	background-color: var(--panel-bg);
+	color: var(--text-on-dark);
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+.list-buttons button:focus-visible { outline: 3px solid var(--focus-on-dark); outline-offset: 2px; }
+.list-buttons button[hidden] { display: none; }
+.noscript { padding: var(--space-2); background-color: var(--panel-bg); color: var(--text-on-dark); border-radius: 0.5rem; }
